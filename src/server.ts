@@ -9,8 +9,12 @@ app.use(express.json());
 app.post("/compute", (request, response) => {
   const game = request.body.game;
   // TODO: Validate input
-
-  const score = compute(game);
-
+  if (game.length != 10){
+    response.sendStatus(404);
+  } 
   // TODO: Return response
+  else {
+    const score1 = compute(game);
+    response.send({score: score1}).status(200)
+  }
 });
