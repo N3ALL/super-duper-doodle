@@ -10,7 +10,7 @@ app.post("/compute", (request, response) => {
   const game = request.body.game;
   // TODO: Validate input
   if (game.length != 10){
-    response.sendStatus(404);
+    response.sendStatus(400);
   } 
   // TODO: Return response
   else {

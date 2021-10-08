@@ -40,6 +40,6 @@ it("Input validation, response status should be 404", async () => {
       ],
     });
 
-  expect(response.status).toBe(404);
+  expect(response.status).toBe(400);
   
 });
