@@ -8,7 +8,7 @@ app.use(express.json());
 
 app.post("/compute", (request, response) => {
   const game = request.body.game;
-  if (game == null || game.length != 10){
+  if (game == null || game.flat().length != 21){
     response.sendStatus(400);
   } 
   else {
