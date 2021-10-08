@@ -18,21 +18,21 @@ it("should return 300 on a perfect game", () => {
   expect(score).toBe(300);
 });
 
-it("should return 58 on a basic game", () =>{
-  const input58: Game = [
+it("should return 75 on a basic game", () =>{
+  const input75: Game = [
     [1, 2],
     [3, 4],
-    [5, 1],
+    [5, 5],
     [6, 1],
     [3, 2],
-    [3, 3],
+    [3, 7],
     [3, 3],
     [3, 3],
     [3, 3],
     [3, 3, 0],
   ];
-  const score3 = compute(input58)
-  expect(score3).toBe(58);
+  const score3 = compute(input75)
+  expect(score3).toBe(75);
 });
 
 it("should return 136 on a basic game with spares", () =>{
