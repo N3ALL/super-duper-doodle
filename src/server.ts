@@ -9,7 +9,7 @@ app.use(express.json());
 app.post("/compute", (request, response) => {
   const game = request.body.game;
   // TODO: Validate input
-  if (game.length != 10){
+  if (game == null || game.length != 10){
     response.sendStatus(400);
   } 
   // TODO: Return response
